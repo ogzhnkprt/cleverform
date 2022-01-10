@@ -10,15 +10,15 @@
 @import url('p/specials.css');      
 */
 
-@import url('/cleverform/p/c-classes.css');
-@import url('/cleverform/p/c-colors.css');
-@import url('/cleverform/p/c-background.css');
-@import url('/cleverform/p/c-border.css');
-@import url('/cleverform/p/c-sizing-height.css');
-@import url('/cleverform/p/c-sizing-height-ek.css');
-@import url('/cleverform/p/c-sizing-width.css');
-@import url('/cleverform/p/c-sizing-width-ek.css');
-@import url('/cleverform/p/specials.css'); 
+@import url('/login/p/c-classes.css');
+@import url('/login/p/c-colors.css');
+@import url('/login/p/c-background.css');
+@import url('/login/p/c-border.css');
+@import url('/login/p/c-sizing-height.css');
+@import url('/login/p/c-sizing-height-ek.css');
+@import url('/login/p/c-sizing-width.css');
+@import url('/login/p/c-sizing-width-ek.css');
+@import url('/login/p/specials.css'); 
 
 
 /* http://css3.bradshawenterprises.com/filters/ */
