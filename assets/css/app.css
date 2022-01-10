@@ -1,4 +1,4 @@
-
+/*
 @import url('p/c-classes.css');
 @import url('p/c-colors.css');
 @import url('p/c-background.css');
@@ -8,6 +8,20 @@
 @import url('p/c-sizing-width.css');
 @import url('p/c-sizing-width-ek.css');
 @import url('p/specials.css');      
+*/
+
+@import url('/cleverform/assets/p/c-classes.css');
+@import url('/cleverform/assets/p/c-colors.css');
+@import url('/cleverform/assets/p/c-background.css');
+@import url('/cleverform/assets/p/c-border.css');
+@import url('/cleverform/assets/p/c-sizing-height.css');
+@import url('/cleverform/assets/p/c-sizing-height-ek.css');
+@import url('/cleverform/assets/p/c-sizing-width.css');
+@import url('/cleverform/assets/p/c-sizing-width-ek.css');
+@import url('/cleverform/assets/p/specials.css'); 
+
+
+
 
 
 
