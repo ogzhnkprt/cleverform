@@ -1,0 +1,104 @@
+<p-toast></p-toast>
+
+<!-- LOGIN MAIN LAYOUT-->
+<div  class="hY100-min-c" >
+    <div  class="p-grid  p-jc-center hY80-min-c">
+        <div id="logindiv" #loginpanel class="p-col-12 p-md-8 p-lg-4  hY100-min-c ">
+            <div class="p-d-flex  p-jc-center p-flex-column  hY100-min-c  p-ac-center "
+                   loginFormChecker  [loginRequest]="loginRequest"   [(formReady)]="formReady" [(errorFields)]="errorFields" >
+                <ng-container  *ngTemplateOutlet="loginFormTemplate"></ng-container> 
+            </div>
+        </div>      
+    </div>          
+</div> 
+
+
+
+
+
+<!-- ********************************************************************************************* -->
+<!-- MAIN TEMPLATES-->
+
+    <!-- Login Form Template-->
+    <ng-template #loginFormTemplate> 
+        <p-card   styleClass="p-shadow-2 " >
+            <div class=" p-d-flex  p-jc-center ">
+                <h4 style="color:orange">SIGN UP</h4>
+            </div>
+        </p-card >
+		<p-card  styleClass="" *ngIf="loginRequest">
+            <div class=" p-d-flex  p-jc-center p-flex-column ">
+                <div id="formdiv" #formpanel>
+                    <ng-container  *ngTemplateOutlet="loginFormTcknTemplate"></ng-container>      <div class="h20-c"></div>            
+                    <div class="p-d-flex  p-jc-center mv10-c ">
+                        <button  *ngIf="!formReady" pButton type="button"   label="fill the necessary fields..."
+                                class="p-button-danger  m10-sm-c" icon="pi pi-spin pi-spinner" iconPos="left" [disabled]="true">
+                        </button>
+                        <button  *ngIf="formReady" pButton type="button"   label="ENTER NOW"
+                                class="p-button-success  m10-sm-c" icon="pi pi-check" iconPos="left" [disabled]="false">
+                        </button>  
+                        <!-- [disabled]="!formReady" -->                                       
+                    </div> 
+                </div>
+            </div>                
+        </p-card>   
+    
+    </ng-template>
+
+    
+
+
+
+    <!-- Login Form $ Tckn Template -->
+    <ng-template #loginFormTcknTemplate>
+        <div class="p-d-flex  p-jc-center ">
+            <div class="p-fluid p-formgrid ">
+                <div class="p-field mv20-sm-c">
+                    <div id="genderTur" class="p-formgroup-inline ">
+                        <div class="p-field-checkbox">
+                            <h6 style="color:green">GENDER</h6>  
+                        </div>                 
+                        <div class="p-field-checkbox">
+                            <p-radioButton name="gender0" value="0" [(ngModel)]="loginRequest.gender" inputId="male"></p-radioButton>
+                            <label for="male">male</label>
+                        </div>
+                        <div class="p-field-checkbox">
+                            <p-radioButton name="gender1" value="1" [(ngModel)]="loginRequest.gender" inputId="female"></p-radioButton>
+                            <label for="female">female</label>
+                        </div>
+                    </div> 
+                </div> 
+                <!--<p-inputMask [(ngModel)]="val" mask="99-9999" slotChar=" "></p-inputMask>-->
+                <div class="p-field">
+                    <span class="p-float-label mv15-c">
+                        <input id="identityNo" type="text" [(ngModel)]="loginRequest.identityNo"  pInputText 
+                                inputDigitChecker [precision]="11"    /> 
+                        <label for="identityNo">Identity Number</label>
+                    </span>                        
+                </div>                           
+
+                                        
+            </div>
+        </div>
+    </ng-template> 	
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
