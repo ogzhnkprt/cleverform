@@ -60,7 +60,8 @@ export class LoginFormCheckerDirective {
         let errorCount: number=0;
         if (this.loginRequest){
             errorCount=errorCount+this.checkGender(); 
-            errorCount=errorCount+this.checkIdentityNo();                               
+            errorCount=errorCount+this.checkIdentityNo(); 
+            errorCount=errorCount+this.checkCity();                 
         }   
         return errorCount;
     }//checkFields
@@ -87,13 +88,21 @@ export class LoginFormCheckerDirective {
                 let n:number=this.loginRequest.identityNo.length;
                 errorCount++;
                 this.errorFields.push("identityNo");     
-                this.messageService.add({severity:'info', summary:'Form', detail: (11-n)+' digits reguired for Identity Number'});                  
+                //this.messageService.add({severity:'info', summary:'Form', detail: (11-n)+' digits reguired for Identity Number'});                  
             }  
         }
         return errorCount;
     }
 
-
+    private checkCity(): number{ 
+        let errorCount: number=0;
+        let cityExists: boolean = this.loginRequest.city ? true : false;
+        if (!cityExists || this.loginRequest.city.code=="0"){
+            errorCount++;
+            this.errorFields.push("cityid");                     
+        }
+        return errorCount;
+    }
 
 
 }//End 

@@ -24,8 +24,8 @@ import { AppTopic } from './services/app.topic';
     Module1Module   
   ], 
   providers: [AppTopic, 
-              AppService/*,
-              {provide: APP_BASE_HREF, useValue: '/cleverform'} */
+              AppService
+              /*, {provide: APP_BASE_HREF, useValue: '/cleverform'}*/ //for routing 
              ],
   schemas:      [],
   bootstrap: [AppComponent]

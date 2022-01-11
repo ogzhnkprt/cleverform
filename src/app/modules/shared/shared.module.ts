@@ -26,7 +26,7 @@ import { ToastModule } from 'primeng/toast';
 import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
 import { CaptchaModule } from 'primeng/captcha';
-
+import { ListboxModule } from 'primeng/listbox';
 
 import {LoadingComponent} from './components/loading.component';
 import {InputCharSizeCheckerDirective,InputDigitCheckerDirective,InputIntegerCheckerDirective,InputDecimalCheckerDirective} from './directives/form-checker-directives';   
@@ -43,7 +43,8 @@ import {InputCharSizeCheckerDirective,InputDigitCheckerDirective,InputIntegerChe
                   DropdownModule,InputTextModule, ButtonModule,
                   RadioButtonModule, InputMaskModule, InputNumberModule,
                   CheckboxModule, InputTextareaModule, PasswordModule,
-                  CaptchaModule
+                  CaptchaModule,
+                  ListboxModule
                 ],
         declarations: [LoadingComponent,
                 InputCharSizeCheckerDirective,InputDigitCheckerDirective,InputIntegerCheckerDirective,InputDecimalCheckerDirective
@@ -61,6 +62,7 @@ import {InputCharSizeCheckerDirective,InputDigitCheckerDirective,InputIntegerChe
                   RadioButtonModule, InputMaskModule, InputNumberModule,
                   CheckboxModule, InputTextareaModule, PasswordModule,
                   CaptchaModule,
+                  ListboxModule,
                   LoadingComponent,
                   InputCharSizeCheckerDirective,InputDigitCheckerDirective,InputIntegerCheckerDirective,InputDecimalCheckerDirective
                 ]

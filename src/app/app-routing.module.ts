@@ -7,12 +7,8 @@ export const appRoutes: Routes = [
     {
         path: '',
         loadChildren: './modules/module1/module1.module#Module1Module'
-    }
-    ,
-    {
-        path: 'sorgu',
-        loadChildren: './modules/module1/module1.module#Module1Module'
-    }
+    } 
+
 ];
 
 @NgModule({

@@ -1,4 +1,4 @@
-<p-toast></p-toast>
+<p-toast [preventOpenDuplicates]="true"  ></p-toast>
 
 <!-- LOGIN MAIN LAYOUT-->
 <div  class="hY100-min-c" >
@@ -31,10 +31,10 @@
                 <div id="formdiv" #formpanel>
                     <ng-container  *ngTemplateOutlet="loginFormTcknTemplate"></ng-container>      <div class="h20-c"></div>            
                     <div class="p-d-flex  p-jc-center mv10-c ">
-                        <button  *ngIf="!formReady" pButton type="button"   label="fill the necessary fields..."
+                        <button  *ngIf="!formReady" pButton type="button"   label="fill the fields..."
                                 class="p-button-danger  m10-sm-c" icon="pi pi-spin pi-spinner" iconPos="left" [disabled]="true">
                         </button>
-                        <button  *ngIf="formReady" pButton type="button"   label="ENTER NOW"
+                        <button  *ngIf="formReady" pButton type="button"   label="SAVE"
                                 class="p-button-success  m10-sm-c" icon="pi pi-check" iconPos="left" [disabled]="false">
                         </button>  
                         <!-- [disabled]="!formReady" -->                                       
@@ -53,10 +53,32 @@
     <ng-template #loginFormTcknTemplate>
         <div class="p-d-flex  p-jc-center ">
             <div class="p-fluid p-formgrid ">
+   
+   
+                <div class="p-field mv20-sm-c">
+                    <div>
+                        <h6 style="color:green">Identity Number</h6>  
+                    </div>  
+                    <div class="p-field">
+                        <input id="identityNo" type="text" [(ngModel)]="loginRequest.identityNo"  pInputText 
+                                inputDigitChecker [precision]="11"  placeholder="11 digits"  /> 
+                    </div>                                          
+                    
+                </div>    
+
+                <div class="p-field mv20-sm-c">
+                    <div>
+                        <h6 style="color:green">City</h6>  
+                    </div>                 
+                    <div class="p-field" id="cityid">
+                        <p-listbox name="cityx" [options]="cities" [(ngModel)]="loginRequest.city" optionLabel="name" optionValue="code" inputId="city"></p-listbox>
+                    </div>
+                </div> 
+                
                 <div class="p-field mv20-sm-c">
                     <div id="genderTur" class="p-formgroup-inline ">
                         <div class="p-field-checkbox">
-                            <h6 style="color:green">GENDER</h6>  
+                            <h6 style="color:green">Gender</h6>  
                         </div>                 
                         <div class="p-field-checkbox">
                             <p-radioButton name="gender0" value="0" [(ngModel)]="loginRequest.gender" inputId="male"></p-radioButton>
@@ -68,16 +90,7 @@
                         </div>
                     </div> 
                 </div> 
-                <!--<p-inputMask [(ngModel)]="val" mask="99-9999" slotChar=" "></p-inputMask>-->
-                <div class="p-field">
-                    <span class="p-float-label mv15-c">
-                        <input id="identityNo" type="text" [(ngModel)]="loginRequest.identityNo"  pInputText 
-                                inputDigitChecker [precision]="11"    /> 
-                        <label for="identityNo">Identity Number</label>
-                    </span>                        
-                </div>                           
-
-                                        
+                
             </div>
         </div>
     </ng-template> 	

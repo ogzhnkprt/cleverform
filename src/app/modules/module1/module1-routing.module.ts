@@ -14,8 +14,9 @@ export const module1Routes: Routes = [
           path: '',
           component: LoginComponent
         }
-      ]      
-    }
+      ] 
+     }  
+
 
 ];
 
